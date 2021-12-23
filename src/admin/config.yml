@@ -35,7 +35,7 @@ collections:
     fields:
       - { label: "Product Name", name: "prodname", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Price", name: "price", widget: "datetime", widget: "number", required }
+      - { label: "Price", name: "price", widget: "number" }
       - { label: "Available for Next Day Delivery", name: "nextday", widget: "boolean" }
   - label: "Settings"
     name: "settings"
