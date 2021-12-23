@@ -21,13 +21,19 @@
                 render: function() {
                     const separator = this.props.field.get('separator', ', ');
                     var value = this.props.value;
-                    return h('input', {
-                    id: this.props.forID,
-                    className: this.props.classNameWrapper,
-                    type: 'text',
-                    value: value ? value.join(separator) : '',
-                    onChange: this.handleChange,
-                    });
+
+                    const styles = { background: "red" }
+
+                    return h('input',
+                        {
+                            style: styles,
+                            id: this.props.forID,
+                            className: this.props.classNameWrapper,
+                            type: 'text',
+                            value: value ? value.join(separator) : '',
+                            onChange: this.handleChange,
+                        }
+                    );
                 },
                 });
 
@@ -40,13 +46,11 @@
                     );
                 }
                 });
-
                 var schema = {
                 properties: {
                     separator: { type: 'string' },
                 },
                 }
-
                 window.CMS.registerWidget('categories', CategoriesControl, CategoriesPreview, schema);
         </script>
 
