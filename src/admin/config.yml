@@ -40,12 +40,13 @@ collections:
       - { label: "Available for Next Day Delivery", name: "nextday", widget: "boolean", required: false }
   - label: "Product"
     name: "product"
+    identifier_field: "prodname"
     folder: "src/products"
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Product Name", name: "prodname", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Available for Next Day Delivery", name: "nextday", widget: "boolean", required: false }
